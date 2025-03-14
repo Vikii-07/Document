@@ -6,7 +6,7 @@ const DocumentUpload = () => {
   const [applicantName, setApplicantName] = useState("");
   const [applicants, setApplicants] = useState([]);
 
-  // Function to add a new applicant
+  
   const addApplicant = () => {
     if (applicantName.trim() !== "") {
       setApplicants([...applicants, applicantName]);
@@ -15,7 +15,7 @@ const DocumentUpload = () => {
     }
   };
 
-  // Function to remove an applicant
+  
   const removeApplicant = (index) => {
     const updatedApplicants = applicants.filter((_, i) => i !== index);
     setApplicants(updatedApplicants);
@@ -41,18 +41,18 @@ const DocumentUpload = () => {
         ))}
       </div>
 
-      {/* Divider */}
+      
       <hr />
 
      
 
-      {/* Navigation Buttons */}
+      
       <div className="buttons">
         <button className="back">← Back</button>
         <button className="next">Next →</button>
       </div>
 
-      {/* Add Applicant Modal */}
+    
       {showModal && (
         <div className="modal-overlay">
           <div className="modal">
@@ -72,8 +72,8 @@ const DocumentUpload = () => {
             </div>
 
             <div className="modal-footer">
-              <button className="save" onClick={addApplicant}>✅ Save</button>
-              <button className="cancel" onClick={() => setShowModal(false)}>❌ Cancel</button>
+              <button className="save" onClick={addApplicant}> Save</button>
+              <button className="cancel" onClick={() => setShowModal(false)}> Cancel</button>
             </div>
           </div>
         </div>
